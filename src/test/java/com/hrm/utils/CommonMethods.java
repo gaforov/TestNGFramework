@@ -6,10 +6,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.UnexpectedTagNameException;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import static com.hrm.base.BaseClass.*;
@@ -324,14 +327,38 @@ public class CommonMethods {
      * Method will take screenshot of specified element and saves it in provided destination filePath
      * @param element pass element which you want screenshot of.
      * @param destinationFileName taken screenshot will be saved in this destination, give it a name
-     *                            with extension type(png or jpeg).
+     *                            (default extension is png can be changed to jpeg or others from CommonMethods where it is located).
      */
-    public static void takeScreenshot(WebElement element, String destinationFileName) {
+    public static String takeScreenshot(WebElement element, String destinationFileName) {
         File sourceFile = element.getScreenshotAs(OutputType.FILE);
+        String destinationFile = Constants.SCREENSHOT_FILEPATH + destinationFileName + "_" + timeStamp() + ".png";
         try {
-            FileUtils.copyFile(sourceFile, new File("screenshots/HRMS/" + destinationFileName + ".png"));
+            FileUtils.copyFile(sourceFile, new File(destinationFile));
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return destinationFile;
     }
+
+    /**
+     * This method overload is for older (v3) Selenium for use in Listener where it requires only one String parameter.
+     * @param destinationFileName provide a name to destination file
+     * @return will return destination file as String format
+     */
+    public static String takeScreenshot(String destinationFileName) {
+        TakesScreenshot takesScreenshot = (TakesScreenshot)driver;
+        File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+        String destinationFile = Constants.SCREENSHOT_FILEPATH + destinationFileName + "_" + timeStamp() + ".png";
+        try {
+            FileUtils.copyFile(sourceFile, new File(destinationFile));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return destinationFile;
+    }
+
+    static public String timeStamp() {
+        return new SimpleDateFormat("yyyy-MM-dd_HH_mm_ss_SSS").format(new Date());
+    }
+
 }

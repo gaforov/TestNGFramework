@@ -22,7 +22,7 @@ public class LoginTest extends BaseClass {  //You either extend them (not recomm
         System.out.println("Admin login is successful"); // this message only runs if Assertion doesn't fail.
     }
 
-    @Test(groups = "regression")
+    @Test(groups = {"regression", "smoke"})
     public void testLoginInvalidPassword() {
         //var login = new LoginPageElements();
         String invalidPassword = "abc123";
@@ -35,7 +35,7 @@ public class LoginTest extends BaseClass {  //You either extend them (not recomm
         //Assert.assertTrue(actualErrorMsg.equals("Invalid credentials"), "Error message is not correct"); // Alternative assertion
     }
 
-    @Test(groups = "regression")
+    @Test(groups = {"regression", "smoke"})
     public void testLoginEmptyUsername() {
         sendText(loginPage.password, ConfigsReader.getProperty("password"));
         loginPage.loginButton.click();

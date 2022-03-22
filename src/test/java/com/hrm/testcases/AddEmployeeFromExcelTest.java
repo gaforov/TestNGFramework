@@ -28,8 +28,8 @@ public class AddEmployeeFromExcelTest extends BaseClass {
     /**
      * This @Test method will add employee(s) from given spreadsheet/excel using DataProvider annotation of TestNG.
      */
-    @Test(dataProvider = "testAddEmployeeToHRM", groups = {"homework", "addEmp", "regression"})
-    public void testAddEmployeeToHRM(String firstname, String lastname, String username, String password) {
+    @Test(dataProvider = "userDataFromExcel", groups = {"homework", "addEmp", "regression"})
+    public void userDataFromExcel(String firstname, String lastname, String username, String password) {
         // login to HRMS
         loginPage.loginAndClick(ConfigsReader.getProperty("username"), ConfigsReader.getProperty("password"));
         // Navigate to PIM --> Add Employee
@@ -74,7 +74,7 @@ public class AddEmployeeFromExcelTest extends BaseClass {
         };
     }
 
-    @DataProvider(name = "testAddEmployeeToHRM") // if u want to read from this DataProvider, then change name at @Test to this
+    @DataProvider(name = "userDataFromExcel") // if u want to read from this DataProvider, then change name at @Test to this
     public Object[][] getDataExcel() {
         return ExcelUtility.excelToArray(Constants.TESTDATA_FILEPATH,"Employee");
     }

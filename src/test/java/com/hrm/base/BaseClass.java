@@ -20,9 +20,9 @@ import static com.hrm.base.PageInitializer.*;
 
 public class BaseClass {
     public static WebDriver driver;
-    ExtentReports reports;
+//    static ExtentReports reports;
 
-    // This entire generateReport was moved to Listener class inside onFinish() method. That way BaseClass will stay cleaner and do what it is meant to do only.
+     //This entire generateReport was moved to Listener class inside onStart() == @BeforeTest. That way BaseClass will stay cleaner and do what it is meant to do only.
 //    @BeforeTest(alwaysRun = true)
 //    public void generateReport() {
 //        System.out.println("BEFORE TEST RUNNING"); // just to see if this method running
@@ -32,11 +32,10 @@ public class BaseClass {
 //        reporter.config().setReportName("HRM Extent Report");
 //        reports = new ExtentReports();
 //        reports.attachReporter(reporter);
-//        ExtentTest test = reports.createTest("testLoginAdminUser");
-//        reports.flush();
+//        //ExtentTest test = reports.createTest("testLoginAdminUser"); // <-- This line moved to Listener class but not onStart() method.
 //    }
 
-    // No need for this method, you can implement flush right inside generaReport() and will do the job. Also, you can move entire report to listener onFinish() as well.
+    // moved to Listener class inside onFinish() == @AfterTest
 //    @AfterTest(alwaysRun = true)
 //    public void writeReport() {
 //        reports.flush();
@@ -72,7 +71,7 @@ public class BaseClass {
         if (driver != null) {
 
             try {
-                Thread.sleep(2000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

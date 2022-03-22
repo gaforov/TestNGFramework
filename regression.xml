@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+
+    <listeners>
+        <listener class-name="com.hrm.base.Listener"/>
+    </listeners>
+
+    <test verbose="2" preserve-order="true" name="Regression Test">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.hrm.testcases"/>
+        </packages>
+    </test>
+
+</suite>

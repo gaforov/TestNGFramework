@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-03-20T16:28:40 PDT" name="Command line suite" finished-at="2022-03-20T16:29:05 PDT" duration-ms="25141">
+    <groups>
+      <group name="regression">
+        <method signature="LoginTest.testLoginEmptyUsername()[pri:0, instance:com.hrm.testcases.LoginTest@15b3e5b]" name="testLoginEmptyUsername" class="com.hrm.testcases.LoginTest"/>
+        <method signature="LoginTest.testLoginInvalidPassword()[pri:0, instance:com.hrm.testcases.LoginTest@15b3e5b]" name="testLoginInvalidPassword" class="com.hrm.testcases.LoginTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="LoginTest.testLoginAdminUser()[pri:0, instance:com.hrm.testcases.LoginTest@15b3e5b]" name="testLoginAdminUser" class="com.hrm.testcases.LoginTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2022-03-20T16:28:40 PDT" name="Command line test" finished-at="2022-03-20T16:29:05 PDT" duration-ms="25141">
+      <class name="com.hrm.testcases.AddEmployeeTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.AddEmployeeTest@7f416310]" started-at="2022-03-20T16:28:55 PDT" name="setUp" finished-at="2022-03-20T16:28:57 PDT" duration-ms="1719" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAddNewEmployee()[pri:0, instance:com.hrm.testcases.AddEmployeeTest@7f416310]" started-at="2022-03-20T16:28:57 PDT" name="testAddNewEmployee" finished-at="2022-03-20T16:29:03 PDT" duration-ms="5952" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNewEmployee -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.AddEmployeeTest@7f416310]" started-at="2022-03-20T16:29:03 PDT" name="tearDown" finished-at="2022-03-20T16:29:05 PDT" duration-ms="2116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.hrm.testcases.AddEmployeeTest -->
+      <class name="com.hrm.testcases.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.LoginTest@15b3e5b]" started-at="2022-03-20T16:28:40 PDT" name="setUp" finished-at="2022-03-20T16:28:43 PDT" duration-ms="2846" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginAdminUser()[pri:0, instance:com.hrm.testcases.LoginTest@15b3e5b]" started-at="2022-03-20T16:28:43 PDT" name="testLoginAdminUser" finished-at="2022-03-20T16:28:44 PDT" duration-ms="1679" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginAdminUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.LoginTest@15b3e5b]" started-at="2022-03-20T16:28:44 PDT" name="tearDown" finished-at="2022-03-20T16:28:46 PDT" duration-ms="2125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.LoginTest@15b3e5b]" started-at="2022-03-20T16:28:46 PDT" name="setUp" finished-at="2022-03-20T16:28:48 PDT" duration-ms="1732" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginEmptyUsername()[pri:0, instance:com.hrm.testcases.LoginTest@15b3e5b]" started-at="2022-03-20T16:28:48 PDT" name="testLoginEmptyUsername" finished-at="2022-03-20T16:28:48 PDT" duration-ms="102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginEmptyUsername -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.LoginTest@15b3e5b]" started-at="2022-03-20T16:28:48 PDT" name="tearDown" finished-at="2022-03-20T16:28:50 PDT" duration-ms="2116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.LoginTest@15b3e5b]" started-at="2022-03-20T16:28:50 PDT" name="setUp" finished-at="2022-03-20T16:28:52 PDT" duration-ms="1829" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginInvalidPassword()[pri:0, instance:com.hrm.testcases.LoginTest@15b3e5b]" started-at="2022-03-20T16:28:52 PDT" name="testLoginInvalidPassword" finished-at="2022-03-20T16:28:53 PDT" duration-ms="793" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginInvalidPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.LoginTest@15b3e5b]" started-at="2022-03-20T16:28:53 PDT" name="tearDown" finished-at="2022-03-20T16:28:55 PDT" duration-ms="2117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.hrm.testcases.LoginTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

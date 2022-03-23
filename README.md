@@ -1,4 +1,4 @@
-# DDT_Framework
+# DDT Framework
 This is a **Data Driven** Testing (**DDT**) TestNG Framework
 - based on Page Object Model (POM) Pattern Design. 
 - _I developed this framework from scratch and some tools I used are:_
@@ -15,8 +15,8 @@ This is a **Data Driven** Testing (**DDT**) TestNG Framework
 
 <p>&nbsp;</p>
 1. Organized, minimalistic, and clean coding is the key!
-
 <p>&nbsp;</p>
+
 When someone opens your framework, you don't want this happen to them? 
 
 - ![](screenshots/tupperware-fail_clean_coding.gif)
@@ -31,3 +31,7 @@ D -- Research/Refactor --> A
 C --- E{{is it clean code?}}
 E -- Yes --> F[Great!]
 E -- No -->D
+
+````
+
+- `System.out.println("Happy Coding!");`

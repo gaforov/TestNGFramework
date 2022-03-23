@@ -12,7 +12,7 @@ public class AddEmployeeTest extends BaseClass {
     /**
      * This @Test method will add employee(s) from the configs package, configuration properties file.
      */
-    @Test
+    @Test(groups = "regression")
     public void testAddNewEmployee() {
         loginPage.loginAndClick(ConfigsReader.getProperty("username"),ConfigsReader.getProperty("password"));
         pimPage.navigateToAddEmployee();

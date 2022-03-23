@@ -28,7 +28,7 @@ public class AddEmployeeFromExcelTest extends BaseClass {
     /**
      * This @Test method will add employee(s) from given spreadsheet/excel using DataProvider annotation of TestNG.
      */
-    @Test(dataProvider = "userDataFromExcel", groups = {"homework", "addEmp", "regression"})
+    @Test(dataProvider = "userDataFromExcel", groups = {"dataFromExcel", "addEmp", "regression"})
     public void userDataFromExcel(String firstname, String lastname, String username, String password) {
         // login to HRMS
         loginPage.loginAndClick(ConfigsReader.getProperty("username"), ConfigsReader.getProperty("password"));
@@ -52,12 +52,13 @@ public class AddEmployeeFromExcelTest extends BaseClass {
         waitForVisibility(personalDetailsPage.personalDetailsHeaderText);
         String actualEmployeeId = personalDetailsPage.employeeId.getAttribute("value");
         Assert.assertEquals(actualEmployeeId, createdEmployeeId, "Employee IDs don't match");
-        // Take screenshot of entire Employee Details Page
+
+        // Take screenshot of entire Employee Details Page Note: Screenshot taken if only employee gets added, and they go directly inside 'screenshots' folder, outside 'FAIL', 'PASS' folders.
         WebElement employeeDetailsPage = driver.findElement(By.id("employee-details"));
 //        File sourceFile = employeeDetailsPage.getScreenshotAs(OutputType.FILE);
 //        FileUtils.copyFile(sourceFile, new File("screenshots/HRMS/AddedEmployee.png"));
         //Take screenshot using pre-built function from CommonMethods class:
-        takeScreenshot(employeeDetailsPage, "AddedEmployee" + firstname + "_" + lastname);
+        takeScreenshot(employeeDetailsPage, "NewEmployeeAdded_" + firstname + "_" + lastname);
 
     }
 

@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">2 suites, 1 failed test</span>
+      <span class="top-banner-font-1">2 suites, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -138,7 +138,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Regression_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Regression Suite</span>
+              <span class="suite-name border-failed">Regression Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -191,7 +191,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Regression_Suite" class="hide-methods failed suite-Regression_Suite"> (hide)</a> <!-- hide-methods failed suite-Regression_Suite -->
+                      <a href="#" panel-name="suite-Regression_Suite" class="show-methods failed suite-Regression_Suite"> (show)</a> <!-- show-methods failed suite-Regression_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Regression_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_Suite" title="com.hrm.testcases.AddEmployeeFromExcelTest" class="method navigator-link" hash-for-method="userDataFromExcel(John, Smith, johnsmith, AmirKhan_@123)">userDataFromExcel(John, Smith, johnsmith, AmirKhan_@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Regression_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -202,7 +216,7 @@
                     <div class="method-list-content passed suite-Regression_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Regression_Suite" title="com.hrm.testcases.AddEmployeeTest" class="method navigator-link" hash-for-method="testAddNewEmployee">testAddNewEmployee</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Regression_Suite" title="com.hrm.testcases.AddEmployeeTest" class="method navigator-link" hash-for-method="testAddNewEmployeeFromPropertiesFile">testAddNewEmployeeFromPropertiesFile</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -218,11 +232,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Regression_Suite" title="com.hrm.testcases.AddEmployeeFromExcelTest" class="method navigator-link" hash-for-method="userDataFromExcel(Muhammad, Ali, muhammadali, AmirKhan_@123)">userDataFromExcel(Muhammad, Ali, muhammadali, AmirKhan_@123)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Regression_Suite" title="com.hrm.testcases.AddEmployeeFromExcelTest" class="method navigator-link" hash-for-method="userDataFromExcel(John, Smith, johnsmith, AmirKhan_@123)">userDataFromExcel(John, Smith, johnsmith, AmirKhan_@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -253,7 +262,7 @@
                   <a name="testLoginAdminUser">
                   </a> <!-- testLoginAdminUser -->
                   <span class="method-name">testLoginAdminUser</span>
-                  <div class="stack-trace">java.lang.AssertionError: Logged in user is NOT Admin expected [Welcome Admin] but found [Welcome Abhi]
+                  <div class="stack-trace">java.lang.AssertionError: Logged in user is NOT Admin expected [Welcome Admin] but found [Welcome Paul]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -322,6 +331,95 @@
           </div> <!-- suite-Smoke_Suite-class-passed -->
         </div> <!-- panel Smoke_Suite -->
         <div panel-name="suite-Regression_Suite" class="panel Regression_Suite">
+          <div class="suite-Regression_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.hrm.testcases.AddEmployeeFromExcelTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="userDataFromExcel(John, Smith, johnsmith, AmirKhan_@123)">
+                  </a> <!-- userDataFromExcel(John, Smith, johnsmith, AmirKhan_@123) -->
+                  <span class="method-name">userDataFromExcel</span>
+                  <span class="parameters">(John, Smith, johnsmith, AmirKhan_@123)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: div#pdMainContainer h1&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.hrm.utils.CommonMethods.waitForVisibility(CommonMethods.java:259)
+	at com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel(AddEmployeeFromExcelTest.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div#pdMainContainer h1&quot;}
+  (Session info: chrome=99.0.4844.83)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;Shahnozas-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:1c58:d362:d916:715c%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.3&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9197ea0a6ed641158bb870e951b33555, findElement {using=css selector, value=div#pdMainContainer h1}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.83, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /var/folders/2d/b3mbjfrj7yq...}, goog:chromeOptions: {debuggerAddress: localhost:56103}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56103/devtoo..., se:cdpVersion: 99.0.4844.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9197ea0a6ed641158bb870e951b33555
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 34 more
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression_Suite-class-failed -->
           <div class="suite-Regression_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -330,9 +428,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testAddNewEmployee">
-                  </a> <!-- testAddNewEmployee -->
-                  <span class="method-name">testAddNewEmployee</span>
+                  <a name="testAddNewEmployeeFromPropertiesFile">
+                  </a> <!-- testAddNewEmployeeFromPropertiesFile -->
+                  <span class="method-name">testAddNewEmployeeFromPropertiesFile</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -371,14 +469,6 @@
                   </a> <!-- userDataFromExcel(Muhammad, Ali, muhammadali, AmirKhan_@123) -->
                   <span class="method-name">userDataFromExcel</span>
                   <span class="parameters">(Muhammad, Ali, muhammadali, AmirKhan_@123)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="userDataFromExcel(John, Smith, johnsmith, AmirKhan_@123)">
-                  </a> <!-- userDataFromExcel(John, Smith, johnsmith, AmirKhan_@123) -->
-                  <span class="method-name">userDataFromExcel</span>
-                  <span class="parameters">(John, Smith, johnsmith, AmirKhan_@123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -487,7 +577,7 @@
               <span class="test-group-name">regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">testAddNewEmployee</span>
+                <span class="method-in-group-name">testAddNewEmployeeFromPropertiesFile</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
@@ -535,7 +625,7 @@
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
-              <span class="test-group-name">homework</span>
+              <span class="test-group-name">dataFromExcel</span>
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">userDataFromExcel</span>
@@ -546,7 +636,7 @@
               <span class="test-group-name">regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">testAddNewEmployee</span>
+                <span class="method-in-group-name">testAddNewEmployeeFromPropertiesFile</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
@@ -598,15 +688,15 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testLoginAdminUser')
 data.setCell(0, 2, 'com.hrm.testcases.LoginTest')
-data.setCell(0, 3, 2302);
+data.setCell(0, 3, 2263);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testLoginInvalidPassword')
 data.setCell(1, 2, 'com.hrm.testcases.LoginTest')
-data.setCell(1, 3, 1278);
+data.setCell(1, 3, 1386);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testLoginEmptyUsername')
 data.setCell(2, 2, 'com.hrm.testcases.LoginTest')
-data.setCell(2, 3, 116);
+data.setCell(2, 3, 93);
 window.suiteTableData['Smoke_Suite']= { tableData: data, tableDiv: 'times-div-Smoke_Suite'}
 return data;
 }
@@ -635,32 +725,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'userDataFromExcel')
 data.setCell(0, 2, 'com.hrm.testcases.AddEmployeeFromExcelTest')
-data.setCell(0, 3, 8315);
+data.setCell(0, 3, 36611);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'userDataFromExcel')
 data.setCell(1, 2, 'com.hrm.testcases.AddEmployeeFromExcelTest')
-data.setCell(1, 3, 8237);
+data.setCell(1, 3, 8252);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'userDataFromExcel')
 data.setCell(2, 2, 'com.hrm.testcases.AddEmployeeFromExcelTest')
-data.setCell(2, 3, 7577);
+data.setCell(2, 3, 8068);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testAddNewEmployee')
+data.setCell(3, 1, 'testAddNewEmployeeFromPropertiesFile')
 data.setCell(3, 2, 'com.hrm.testcases.AddEmployeeTest')
-data.setCell(3, 3, 4886);
+data.setCell(3, 3, 4812);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'testLoginInvalidPassword')
 data.setCell(4, 2, 'com.hrm.testcases.LoginTest')
-data.setCell(4, 3, 1575);
+data.setCell(4, 3, 1247);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'testLoginEmptyUsername')
 data.setCell(5, 2, 'com.hrm.testcases.LoginTest')
-data.setCell(5, 3, 109);
+data.setCell(5, 3, 101);
 window.suiteTableData['Regression_Suite']= { tableData: data, tableDiv: 'times-div-Regression_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 30 seconds</span>
+              <span class="suite-total-time">Total running time: 59 seconds</span>
               <div id="times-div-Regression_Suite">
               </div> <!-- times-div-Regression_Suite -->
             </div> <!-- times-div -->
@@ -688,7 +778,7 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.hrm.testcases.AddEmployeeTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">testAddNewEmployee</span>
+                <span class="ignored-method-name">testAddNewEmployeeFromPropertiesFile</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -730,35 +820,35 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testLoginAdminUser</span>
-                <span class="method-start">2761 ms</span>
+                <span class="method-start">2599 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">5336 ms</span>
+                <span class="method-start">5162 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">6463 ms</span>
+                <span class="method-start">6277 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLoginEmptyUsername</span>
-                <span class="method-start">8518 ms</span>
+                <span class="method-start">8485 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">29340 ms</span>
+                <span class="method-start">29301 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">30456 ms</span>
+                <span class="method-start">30416 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLoginInvalidPassword</span>
-                <span class="method-start">32433 ms</span>
+                <span class="method-start">32452 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">34029 ms</span>
+                <span class="method-start">34153 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -775,77 +865,79 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLoginEmptyUsername</span>
-                <span class="method-start">1999 ms</span>
+                <span class="method-start">2064 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">22884 ms</span>
+                <span class="method-start">22894 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">24002 ms</span>
+                <span class="method-start">24007 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLoginInvalidPassword</span>
-                <span class="method-start">26134 ms</span>
+                <span class="method-start">26267 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">27892 ms</span>
+                <span class="method-start">27815 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.hrm.testcases.AddEmployeeTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">29009 ms</span>
+                <span class="method-start">28930 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testAddNewEmployee</span>
-                <span class="method-start">30919 ms</span>
+                <span class="method-name">testAddNewEmployeeFromPropertiesFile</span>
+                <span class="method-start">30869 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">35964 ms</span>
+                <span class="method-start">35936 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.hrm.testcases.AddEmployeeFromExcelTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">37318 ms</span>
+                <span class="method-start">37312 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">userDataFromExcel(John, Smith, johnsmith, AmirKhan_@123)</span>
-                <span class="method-start">39125 ms</span>
+                <span class="method-start">39306 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">47609 ms</span>
+                <span class="method-start">76199 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">48751 ms</span>
+                <span class="method-start">77309 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">userDataFromExcel(Mary, Ann, maryann, AmirKhan_@123)</span>
-                <span class="method-start">50693 ms</span>
+                <span class="method-start">79443 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">58417 ms</span>
+                <span class="method-start">87771 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">59558 ms</span>
+                <span class="method-start">88906 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">userDataFromExcel(Muhammad, Ali, muhammadali, AmirKhan_@123)</span>
-                <span class="method-start">61436 ms</span>
+                <span class="method-start">90873 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">69848 ms</span>
+                <span class="method-start">99367 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

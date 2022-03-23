@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="12" passed="8" failed="1" skipped="0">
+<testng-results ignored="3" total="12" passed="7" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-23T10:54:14 PDT" name="Smoke Suite" finished-at="2022-03-23T10:54:49 PDT" duration-ms="35244">
+  <suite started-at="2022-03-23T14:41:40 PDT" name="Smoke Suite" finished-at="2022-03-23T14:42:15 PDT" duration-ms="35365">
     <groups>
       <group name="regression">
         <method signature="LoginTest.testLoginEmptyUsername()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" name="testLoginEmptyUsername" class="com.hrm.testcases.LoginTest"/>
@@ -14,19 +14,19 @@
         <method signature="LoginTest.testLoginInvalidPassword()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" name="testLoginInvalidPassword" class="com.hrm.testcases.LoginTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2022-03-23T10:54:14 PDT" name="Smoke Tests" finished-at="2022-03-23T10:54:49 PDT" duration-ms="35244">
+    <test started-at="2022-03-23T14:41:40 PDT" name="Smoke Tests" finished-at="2022-03-23T14:42:15 PDT" duration-ms="35365">
       <class name="com.hrm.testcases.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T10:54:14 PDT" name="setUp" finished-at="2022-03-23T10:54:17 PDT" duration-ms="2761" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T14:41:40 PDT" name="setUp" finished-at="2022-03-23T14:41:42 PDT" duration-ms="2598" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLoginAdminUser()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T10:54:17 PDT" name="testLoginAdminUser" finished-at="2022-03-23T10:54:19 PDT" duration-ms="2302" status="FAIL">
+        <test-method signature="testLoginAdminUser()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T14:41:42 PDT" name="testLoginAdminUser" finished-at="2022-03-23T14:41:45 PDT" duration-ms="2263" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Logged in user is NOT Admin expected [Welcome Admin] but found [Welcome Abhi]]]>
+              <![CDATA[Logged in user is NOT Admin expected [Welcome Admin] but found [Welcome Paul]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Logged in user is NOT Admin expected [Welcome Admin] but found [Welcome Abhi]
+              <![CDATA[java.lang.AssertionError: Logged in user is NOT Admin expected [Welcome Admin] but found [Welcome Paul]
 at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1413)
 at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -71,48 +71,48 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginAdminUser -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T10:54:20 PDT" name="tearDown" finished-at="2022-03-23T10:54:21 PDT" duration-ms="1126" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T14:41:45 PDT" name="tearDown" finished-at="2022-03-23T14:41:46 PDT" duration-ms="1114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T10:54:21 PDT" name="setUp" finished-at="2022-03-23T10:54:23 PDT" duration-ms="2055" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T14:41:46 PDT" name="setUp" finished-at="2022-03-23T14:41:48 PDT" duration-ms="2208" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLoginEmptyUsername()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T10:54:23 PDT" name="testLoginEmptyUsername" finished-at="2022-03-23T10:54:23 PDT" duration-ms="116" status="PASS">
+        <test-method signature="testLoginEmptyUsername()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T14:41:48 PDT" name="testLoginEmptyUsername" finished-at="2022-03-23T14:41:48 PDT" duration-ms="93" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginEmptyUsername -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T10:54:44 PDT" name="tearDown" finished-at="2022-03-23T10:54:45 PDT" duration-ms="1116" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T14:42:09 PDT" name="tearDown" finished-at="2022-03-23T14:42:10 PDT" duration-ms="1115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T10:54:45 PDT" name="setUp" finished-at="2022-03-23T10:54:47 PDT" duration-ms="1976" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T14:42:10 PDT" name="setUp" finished-at="2022-03-23T14:42:12 PDT" duration-ms="2036" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLoginInvalidPassword()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T10:54:47 PDT" name="testLoginInvalidPassword" finished-at="2022-03-23T10:54:48 PDT" duration-ms="1278" status="PASS">
+        <test-method signature="testLoginInvalidPassword()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T14:42:12 PDT" name="testLoginInvalidPassword" finished-at="2022-03-23T14:42:14 PDT" duration-ms="1386" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginInvalidPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T10:54:48 PDT" name="tearDown" finished-at="2022-03-23T10:54:49 PDT" duration-ms="1113" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.LoginTest@4fe767f3]" started-at="2022-03-23T14:42:14 PDT" name="tearDown" finished-at="2022-03-23T14:42:15 PDT" duration-ms="1112" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.hrm.testcases.LoginTest -->
     </test> <!-- Smoke Tests -->
   </suite> <!-- Smoke Suite -->
-  <suite started-at="2022-03-23T10:54:49 PDT" name="Regression Suite" finished-at="2022-03-23T10:56:00 PDT" duration-ms="70984">
+  <suite started-at="2022-03-23T14:42:15 PDT" name="Regression Suite" finished-at="2022-03-23T14:43:56 PDT" duration-ms="100512">
     <groups>
       <group name="addEmp">
         <method signature="AddEmployeeFromExcelTest.userDataFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" name="userDataFromExcel" class="com.hrm.testcases.AddEmployeeFromExcelTest"/>
       </group> <!-- addEmp -->
-      <group name="homework">
+      <group name="dataFromExcel">
         <method signature="AddEmployeeFromExcelTest.userDataFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" name="userDataFromExcel" class="com.hrm.testcases.AddEmployeeFromExcelTest"/>
-      </group> <!-- homework -->
+      </group> <!-- dataFromExcel -->
       <group name="regression">
         <method signature="AddEmployeeFromExcelTest.userDataFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" name="userDataFromExcel" class="com.hrm.testcases.AddEmployeeFromExcelTest"/>
-        <method signature="AddEmployeeTest.testAddNewEmployee()[pri:0, instance:com.hrm.testcases.AddEmployeeTest@60d8c9b7]" name="testAddNewEmployee" class="com.hrm.testcases.AddEmployeeTest"/>
+        <method signature="AddEmployeeTest.testAddNewEmployeeFromPropertiesFile()[pri:0, instance:com.hrm.testcases.AddEmployeeTest@60d8c9b7]" name="testAddNewEmployeeFromPropertiesFile" class="com.hrm.testcases.AddEmployeeTest"/>
         <method signature="LoginTest.testLoginEmptyUsername()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" name="testLoginEmptyUsername" class="com.hrm.testcases.LoginTest"/>
         <method signature="LoginTest.testLoginInvalidPassword()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" name="testLoginInvalidPassword" class="com.hrm.testcases.LoginTest"/>
       </group> <!-- regression -->
@@ -121,27 +121,27 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
         <method signature="LoginTest.testLoginInvalidPassword()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" name="testLoginInvalidPassword" class="com.hrm.testcases.LoginTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2022-03-23T10:54:49 PDT" name="Regression Test" finished-at="2022-03-23T10:56:00 PDT" duration-ms="70984">
+    <test started-at="2022-03-23T14:42:15 PDT" name="Regression Test" finished-at="2022-03-23T14:43:56 PDT" duration-ms="100512">
       <class name="com.hrm.testcases.AddEmployeeTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.AddEmployeeTest@60d8c9b7]" started-at="2022-03-23T10:55:18 PDT" name="setUp" finished-at="2022-03-23T10:55:20 PDT" duration-ms="1910" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.AddEmployeeTest@60d8c9b7]" started-at="2022-03-23T14:42:44 PDT" name="setUp" finished-at="2022-03-23T14:42:46 PDT" duration-ms="1938" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAddNewEmployee()[pri:0, instance:com.hrm.testcases.AddEmployeeTest@60d8c9b7]" started-at="2022-03-23T10:55:20 PDT" name="testAddNewEmployee" finished-at="2022-03-23T10:55:25 PDT" duration-ms="4886" status="PASS">
+        <test-method signature="testAddNewEmployeeFromPropertiesFile()[pri:0, instance:com.hrm.testcases.AddEmployeeTest@60d8c9b7]" started-at="2022-03-23T14:42:46 PDT" name="testAddNewEmployeeFromPropertiesFile" finished-at="2022-03-23T14:42:51 PDT" duration-ms="4812" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddNewEmployee -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.AddEmployeeTest@60d8c9b7]" started-at="2022-03-23T10:55:25 PDT" name="tearDown" finished-at="2022-03-23T10:55:27 PDT" duration-ms="1111" status="PASS">
+        </test-method> <!-- testAddNewEmployeeFromPropertiesFile -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.AddEmployeeTest@60d8c9b7]" started-at="2022-03-23T14:42:51 PDT" name="tearDown" finished-at="2022-03-23T14:42:52 PDT" duration-ms="1115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.hrm.testcases.AddEmployeeTest -->
       <class name="com.hrm.testcases.AddEmployeeFromExcelTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T10:55:27 PDT" name="setUp" finished-at="2022-03-23T10:55:29 PDT" duration-ms="1807" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T14:42:52 PDT" name="setUp" finished-at="2022-03-23T14:42:54 PDT" duration-ms="1994" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="userDataFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T10:55:29 PDT" name="userDataFromExcel" data-provider="userDataFromExcel" finished-at="2022-03-23T10:55:37 PDT" duration-ms="8315" status="PASS">
+        <test-method signature="userDataFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T14:42:54 PDT" name="userDataFromExcel" data-provider="userDataFromExcel" finished-at="2022-03-23T14:43:31 PDT" duration-ms="36611" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -164,18 +164,97 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: div#pdMainContainer h1' (tried for 15 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: div#pdMainContainer h1' (tried for 15 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at com.hrm.utils.CommonMethods.waitForVisibility(CommonMethods.java:259)
+at com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel(AddEmployeeFromExcelTest.java:52)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div#pdMainContainer h1"}
+  (Session info: chrome=99.0.4844.83)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'Shahnozas-MacBook-Air.local', ip: 'fe80:0:0:0:1c58:d362:d916:715c%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.3', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9197ea0a6ed641158bb870e951b33555, findElement {using=css selector, value=div#pdMainContainer h1}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.83, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /var/folders/2d/b3mbjfrj7yq...}, goog:chromeOptions: {debuggerAddress: localhost:56103}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56103/devtoo..., se:cdpVersion: 99.0.4844.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9197ea0a6ed641158bb870e951b33555
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+... 34 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userDataFromExcel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T10:55:37 PDT" name="tearDown" finished-at="2022-03-23T10:55:38 PDT" duration-ms="1142" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T14:43:31 PDT" name="tearDown" finished-at="2022-03-23T14:43:32 PDT" duration-ms="1110" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T10:55:38 PDT" name="setUp" finished-at="2022-03-23T10:55:40 PDT" duration-ms="1941" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T14:43:32 PDT" name="setUp" finished-at="2022-03-23T14:43:35 PDT" duration-ms="2134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="userDataFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T10:55:40 PDT" name="userDataFromExcel" data-provider="userDataFromExcel" finished-at="2022-03-23T10:55:48 PDT" duration-ms="7577" status="PASS">
+        <test-method signature="userDataFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T14:43:35 PDT" name="userDataFromExcel" data-provider="userDataFromExcel" finished-at="2022-03-23T14:43:43 PDT" duration-ms="8068" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -201,15 +280,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userDataFromExcel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T10:55:48 PDT" name="tearDown" finished-at="2022-03-23T10:55:49 PDT" duration-ms="1140" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T14:43:43 PDT" name="tearDown" finished-at="2022-03-23T14:43:44 PDT" duration-ms="1135" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T10:55:49 PDT" name="setUp" finished-at="2022-03-23T10:55:51 PDT" duration-ms="1878" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T14:43:44 PDT" name="setUp" finished-at="2022-03-23T14:43:46 PDT" duration-ms="1967" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="userDataFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T10:55:51 PDT" name="userDataFromExcel" data-provider="userDataFromExcel" finished-at="2022-03-23T10:55:59 PDT" duration-ms="8237" status="PASS">
+        <test-method signature="userDataFromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T14:43:46 PDT" name="userDataFromExcel" data-provider="userDataFromExcel" finished-at="2022-03-23T14:43:54 PDT" duration-ms="8252" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -235,33 +314,33 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userDataFromExcel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T10:55:59 PDT" name="tearDown" finished-at="2022-03-23T10:56:00 PDT" duration-ms="1135" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.AddEmployeeFromExcelTest@48aaecc3]" started-at="2022-03-23T14:43:55 PDT" name="tearDown" finished-at="2022-03-23T14:43:56 PDT" duration-ms="1145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.hrm.testcases.AddEmployeeFromExcelTest -->
       <class name="com.hrm.testcases.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" started-at="2022-03-23T10:54:49 PDT" name="setUp" finished-at="2022-03-23T10:54:51 PDT" duration-ms="1999" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" started-at="2022-03-23T14:42:15 PDT" name="setUp" finished-at="2022-03-23T14:42:17 PDT" duration-ms="2064" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLoginEmptyUsername()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" started-at="2022-03-23T10:54:51 PDT" name="testLoginEmptyUsername" finished-at="2022-03-23T10:54:52 PDT" duration-ms="109" status="PASS">
+        <test-method signature="testLoginEmptyUsername()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" started-at="2022-03-23T14:42:17 PDT" name="testLoginEmptyUsername" finished-at="2022-03-23T14:42:17 PDT" duration-ms="101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginEmptyUsername -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" started-at="2022-03-23T10:55:12 PDT" name="tearDown" finished-at="2022-03-23T10:55:13 PDT" duration-ms="1117" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" started-at="2022-03-23T14:42:38 PDT" name="tearDown" finished-at="2022-03-23T14:42:39 PDT" duration-ms="1112" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" started-at="2022-03-23T10:55:13 PDT" name="setUp" finished-at="2022-03-23T10:55:16 PDT" duration-ms="2131" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" started-at="2022-03-23T14:42:39 PDT" name="setUp" finished-at="2022-03-23T14:42:41 PDT" duration-ms="2260" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLoginInvalidPassword()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" started-at="2022-03-23T10:55:16 PDT" name="testLoginInvalidPassword" finished-at="2022-03-23T10:55:17 PDT" duration-ms="1575" status="PASS">
+        <test-method signature="testLoginInvalidPassword()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" started-at="2022-03-23T14:42:41 PDT" name="testLoginInvalidPassword" finished-at="2022-03-23T14:42:43 PDT" duration-ms="1247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginInvalidPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" started-at="2022-03-23T10:55:17 PDT" name="tearDown" finished-at="2022-03-23T10:55:18 PDT" duration-ms="1117" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrm.testcases.LoginTest@3967e60c]" started-at="2022-03-23T14:42:43 PDT" name="tearDown" finished-at="2022-03-23T14:42:44 PDT" duration-ms="1114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

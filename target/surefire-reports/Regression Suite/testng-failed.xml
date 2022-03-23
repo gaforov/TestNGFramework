@@ -13,7 +13,7 @@
     <classes>
       <class name="com.hrm.testcases.AddEmployeeFromExcelTest">
         <methods>
-          <include name="userDataFromExcel" invocation-numbers="0 1 2"/>
+          <include name="userDataFromExcel" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>

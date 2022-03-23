@@ -1,8 +1,23 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 106.594 s <<< FAILURE! - in TestSuite
-com.hrm.testcases.LoginTest.testLoginAdminUser  Time elapsed: 2.569 s  <<< FAILURE!
-java.lang.AssertionError: Logged in user is NOT Admin expected [Welcome Admin] but found [Welcome Abhi]
+Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 136.451 s <<< FAILURE! - in TestSuite
+com.hrm.testcases.LoginTest.testLoginAdminUser  Time elapsed: 2.558 s  <<< FAILURE!
+java.lang.AssertionError: Logged in user is NOT Admin expected [Welcome Admin] but found [Welcome Paul]
 	at com.hrm.testcases.LoginTest.testLoginAdminUser(LoginTest.java:21)
+
+com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel[John, Smith, johnsmith, AmirKhan_@123](1)  Time elapsed: 36.855 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: div#pdMainContainer h1' (tried for 15 second(s) with 500 milliseconds interval)
+	at com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel(AddEmployeeFromExcelTest.java:52)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"div#pdMainContainer h1"}
+  (Session info: chrome=99.0.4844.83)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'Shahnozas-MacBook-Air.local', ip: 'fe80:0:0:0:1c58:d362:d916:715c%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.3', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9197ea0a6ed641158bb870e951b33555, findElement {using=css selector, value=div#pdMainContainer h1}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.83, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /var/folders/2d/b3mbjfrj7yq...}, goog:chromeOptions: {debuggerAddress: localhost:56103}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56103/devtoo..., se:cdpVersion: 99.0.4844.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9197ea0a6ed641158bb870e951b33555
+	at com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel(AddEmployeeFromExcelTest.java:52)
 

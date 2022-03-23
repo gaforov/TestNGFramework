@@ -348,7 +348,7 @@ public class CommonMethods {
     public static String takeScreenshot(String destinationFileName) {
         TakesScreenshot takesScreenshot = (TakesScreenshot)driver;
         File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        String destinationFile = Constants.SCREENSHOT_FILEPATH + destinationFileName + "_" + timeStamp() + ".png";
+        String destinationFile = Constants.SCREENSHOT_FILEPATH + destinationFileName + "_" + timeStamp() + ".jpeg";
         try {
             FileUtils.copyFile(sourceFile, new File(destinationFile));
         } catch (IOException e) {

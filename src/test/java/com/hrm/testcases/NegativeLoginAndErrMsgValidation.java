@@ -1,6 +1,8 @@
 package com.hrm.testcases;
 
 import com.hrm.base.BaseClass;
+import com.hrm.utils.Constants;
+import com.hrm.utils.ExcelUtility;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -8,7 +10,7 @@ import static com.hrm.base.PageInitializer.loginPage;
 
 public class NegativeLoginAndErrMsgValidation extends BaseClass {
 
-    @Test(dataProvider = "getData")
+    @Test(dataProvider = "getLoginDataFromExcel")
     void testNegativeLogins(String user, String password, String expectedErrorMessage ) {
         loginPage.loginAndClick(user,password);
         Assert.assertEquals(loginPage.errorMessage.getText(),expectedErrorMessage);
@@ -28,4 +30,9 @@ public class NegativeLoginAndErrMsgValidation extends BaseClass {
         return data;
     }
 
+    // 2nd way, pulling data from Excel.
+    @DataProvider
+    public Object[][] getLoginDataFromExcel() {
+        return ExcelUtility.excelToArray(Constants.TESTDATA_FILEPATH, "NegativeLogins");
+    }
 }

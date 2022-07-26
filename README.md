@@ -17,7 +17,7 @@ This is a **Data Driven** Testing (**DDT**) TestNG Framework
 1. Organized, minimalistic, and clean coding is the key!
 <p>&nbsp;</p>
 
-When someone opens your framework, you don't want this happen to them? 
+When someone pulls/opens your framework, you don't want this happen to them? 
 
 - ![](screenshots/tupperware-fail_clean_coding.gif)
 

@@ -7,6 +7,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.hrm.utils.ConfigsReader;
 import com.hrm.utils.Constants;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -47,11 +48,13 @@ public class BaseClass {
 
         switch (ConfigsReader.getProperty("browser").toLowerCase()) {
             case "chrome" -> {
-                System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
+//                System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
+                WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
             }
             case "firefox" -> {
-                System.setProperty("webdriver.gecko.driver", Constants.GECKO_DRIVER_PATH);
+//                System.setProperty("webdriver.gecko.driver", Constants.GECKO_DRIVER_PATH);
+                WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
             }
             default -> throw new RuntimeException("Browser is not supported");

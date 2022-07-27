@@ -24,9 +24,10 @@ import static com.hrm.base.PageInitializer.*;
 import static com.hrm.utils.CommonMethods.*;
 
 public class AddEmployeeFromExcelTest extends BaseClass {
-    // Note: Use Orange HRM for this test. If you use Syntax HRM, Employee IDs will not match, due to syntax site bug, not the code.
+    // Note: Use Orange HRM for this test. Make the switch from the configuration.properties file
     /**
      * This @Test method will add employee(s) from given spreadsheet/excel using DataProvider annotation of TestNG.
+     * Use Orange HRM for this test. If you use Syntax HRM, Employee IDs will not match, due to syntax site bug, not the code.
      */
     @Test(dataProvider = "userDataFromExcel", groups = {"dataFromExcel", "addEmp", "regression"})
     public void userDataFromExcel(String firstname, String lastname, String username, String password) {

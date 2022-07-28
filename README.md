@@ -2,7 +2,7 @@
 _This is a Test Automation Framework demo that I have developed myself from the ground up._
 
 I've incorporated both **Test-Driven** (TDD) and **Data-Driven** Testing (DDT) into this TestNG Framework
-- based on Page Object Model (POM) Pattern Design. 
+- based on **Page Object Model** (POM) Pattern Design. 
 - _... and some tools I've implemented are:_
 - **Java** as main language,
 - **Selenium** as automation,

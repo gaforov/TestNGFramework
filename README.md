@@ -1,12 +1,14 @@
-# DDT Framework
-This is a **Data Driven** Testing (**DDT**) TestNG Framework
+# TestNG Framework
+_This is a Test Automation Framework demo that I have developed myself from the ground up._
+
+I've incorporated both **Test-Driven** (TDD) and **Data-Driven** Testing (DDT) into this TestNG Framework
 - based on Page Object Model (POM) Pattern Design. 
-- _I developed this framework from scratch and some tools I used are:_
+- _... and some tools I've implemented are:_
 - **Java** as main language,
 - **Selenium** as automation,
 - **TestNG** for assertion and running tests,
 - **XML files** for running tests such as **regression** and **smoke** tests,
-- **Extent Reports** plugin for generating **_beautiful reports_** after each test,
+- **Extent Reports** for generating **_beautiful reports_** after each test,
 - **Maven** as an automation tool management used for dependency management using **Project Object Model** (pom.xml),
 - **.properties files** for reading and retrieving test data from the config package,
 - **Excel utility** function for reading and writing data to and from spreadsheets,

@@ -26,7 +26,7 @@ public class LoginPageElements {
 
 
     public LoginPageElements() {
-        PageFactory.initElements(BaseClass.driver, this);  // this OR LoginWithPageFactory.class
+        PageFactory.initElements(BaseClass.driver, this);
     }
 
     /*

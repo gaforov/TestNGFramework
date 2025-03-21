@@ -6,26 +6,33 @@ import com.hrm.utils.ExcelUtility;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 import static com.hrm.base.PageInitializer.loginPage;
 
 public class NegativeLoginAndErrMsgValidation extends BaseClass {
 
-    @Test(dataProvider = "getLoginDataFromExcel")
-    void testNegativeLogins(String user, String password, String expectedErrorMessage ) {
-        loginPage.loginAndClick(user,password);
-        Assert.assertEquals(loginPage.errorMessage.getText(),expectedErrorMessage);
+    @Test(dataProvider = "getData")
+    void testNegativeLogins(String user, String password, String expectedErrorMessage) {
+        loginPage.loginAndClick(user, password);
+        if (expectedErrorMessage.equals("Invalid credentials")) {
+            Assert.assertEquals(loginPage.errorMessage.getText(), expectedErrorMessage);
+        } else if (expectedErrorMessage.equals("Required")) {
+            Assert.assertEquals(loginPage.inputFieldRequiredErrorText.getText(), expectedErrorMessage);
+        } else {
+            Assert.fail("Unexpected error message encountered: " + expectedErrorMessage);
+        }
     }
 
 
     @DataProvider
-    Object[][] getData(){
+    Object[][] getData() {
         Object[][] data = {
                 {"Admin", "admin1234", "Invalid credentials"},  // valid user, invalid password
                 {"Admi", "admin123", "Invalid credentials"},    // invalid user, valid password
                 {"Admi", "admin1234", "Invalid credentials"},   // invalid user, invalid password
-                {"", "admin1234", "Username cannot be empty"},  // empty user, valid password
-                {"Admin", "", "Password cannot be empty"},      // valid user, empty password
-                {"", "", "Username cannot be empty"},           // empty user, empty password
+                {"", "admin1234", "Required"},  // empty user, valid password
+                {"Admin", "", "Required"},      // valid user, empty password
+                {"", "", "Required"},           // empty user, empty password
         };
         return data;
     }

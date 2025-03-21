@@ -6,31 +6,31 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class AddEmployeePageElements {
-    @FindBy(id = "firstName")
+    @FindBy(name = "firstName")
     public WebElement firstName;
 
-    @FindBy(id = "lastName")
+    @FindBy(name = "lastName")
     public WebElement lastName;
 
-    @FindBy(id = "employeeId")
+    @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[2]")
     public WebElement employeeId;
 
     @FindBy(id = "photofile")
     public WebElement uploadPhoto;
 
-    @FindBy(id = "chkLogin")
-    public WebElement createCredentialsCheckbox;
+    @FindBy(xpath = "//span[@class='oxd-switch-input oxd-switch-input--active --label-right']")
+    public WebElement createLoginDetailsCheckBox;
 
-    @FindBy(id = "user_name")
+    @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[3]")
     public WebElement username;
 
-    @FindBy(id = "user_password")
+    @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[4]")
     public WebElement password;
 
-    @FindBy(id = "re_password")
+    @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[5]")
     public WebElement confirmPassword;
 
-    @FindBy(id = "btnSave")
+    @FindBy(xpath = "//button[normalize-space()='Save']")
     public WebElement saveButton;
 
     public AddEmployeePageElements() {

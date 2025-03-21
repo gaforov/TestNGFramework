@@ -8,10 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 import static com.hrm.utils.CommonMethods.click_waitForClickability;
 
 public class PIMPageElements {
-    @FindBy(id = "menu_pim_viewPimModule")
+    @FindBy(xpath = "//span[text()='PIM']")
     public WebElement PIM;
 
-    @FindBy(id = "menu_pim_addEmployee")
+    @FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--secondary']")
     public WebElement addEmployee;
 
     public PIMPageElements() {

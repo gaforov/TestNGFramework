@@ -43,13 +43,17 @@ public class BaseClass {
 //    }
 
     @BeforeMethod(alwaysRun = true)
-    public static WebDriver setUp() {
+    public WebDriver setUp() {
         ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);
+        System.setProperty("webdriver.http.factory", "jdk-http-client"); // Applies to all browsers, Ensures compatibility with SeleniumManager as of Selenium 4.6.0 and later
+
+        // Suppress Selenium's Warning Messages
+        java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(java.util.logging.Level.SEVERE);
 
         switch (ConfigsReader.getProperty("browser").toLowerCase()) {
             case "chrome" -> {
 //                System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
-                WebDriverManager.chromedriver().setup();
+               // WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
             }
             case "firefox" -> {
@@ -69,7 +73,7 @@ public class BaseClass {
     }
 
     @AfterMethod(alwaysRun = true)
-    public static void tearDown() {
+    public void tearDown() {
         if (driver != null) {
 
             try {

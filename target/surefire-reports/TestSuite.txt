@@ -1,23 +1,64 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 136.451 s <<< FAILURE! - in TestSuite
-com.hrm.testcases.LoginTest.testLoginAdminUser  Time elapsed: 2.558 s  <<< FAILURE!
-java.lang.AssertionError: Logged in user is NOT Admin expected [Welcome Admin] but found [Welcome Paul]
-	at com.hrm.testcases.LoginTest.testLoginAdminUser(LoginTest.java:21)
-
-com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel[John, Smith, johnsmith, AmirKhan_@123](1)  Time elapsed: 36.855 s  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: div#pdMainContainer h1' (tried for 15 second(s) with 500 milliseconds interval)
-	at com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel(AddEmployeeFromExcelTest.java:52)
+Tests run: 9, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 174.797 s <<< FAILURE! - in TestSuite
+com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel[John, Smith, johnsmith, AmirKhan_@123](1)  Time elapsed: 32.498 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: menu_pim_viewPimModule' (tried for 15 second(s) with 500 milliseconds interval)
+	at com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel(AddEmployeeFromExcelTest.java:37)
 Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"div#pdMainContainer h1"}
-  (Session info: chrome=99.0.4844.83)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.2', revision: '9a5a329c5a'
-System info: host: 'Shahnozas-MacBook-Air.local', ip: 'fe80:0:0:0:1c58:d362:d916:715c%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.3', java.version: '17.0.2'
+no such element: Unable to locate element: {"method":"css selector","selector":"#menu_pim_viewPimModule"}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9197ea0a6ed641158bb870e951b33555, findElement {using=css selector, value=div#pdMainContainer h1}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.83, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /var/folders/2d/b3mbjfrj7yq...}, goog:chromeOptions: {debuggerAddress: localhost:56103}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56103/devtoo..., se:cdpVersion: 99.0.4844.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9197ea0a6ed641158bb870e951b33555
-	at com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel(AddEmployeeFromExcelTest.java:52)
+Command: [a36a68ea63d2d94569df38fa729effec, findElement {value=menu_pim_viewPimModule, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.90 (219ee74681fc..., userDataDir: C:\Users\sgafo\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51302}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51302/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a36a68ea63d2d94569df38fa729effec
+	at com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel(AddEmployeeFromExcelTest.java:37)
+
+com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel[Mary, Ann, maryann, AmirKhan_@123](2)  Time elapsed: 32.342 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: menu_pim_viewPimModule' (tried for 15 second(s) with 500 milliseconds interval)
+	at com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel(AddEmployeeFromExcelTest.java:37)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#menu_pim_viewPimModule"}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [67d45152a43147e6b3d463b216d0f636, findElement {value=menu_pim_viewPimModule, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.90 (219ee74681fc..., userDataDir: C:\Users\sgafo\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51353}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51353/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 67d45152a43147e6b3d463b216d0f636
+	at com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel(AddEmployeeFromExcelTest.java:37)
+
+com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel[Luke, Skywalker, lukesky, AmirKhan_@123](3)  Time elapsed: 31.671 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: menu_pim_viewPimModule' (tried for 15 second(s) with 500 milliseconds interval)
+	at com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel(AddEmployeeFromExcelTest.java:37)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#menu_pim_viewPimModule"}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5cd83f7868ad0c450a6e524e27f78894, findElement {value=menu_pim_viewPimModule, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.90 (219ee74681fc..., userDataDir: C:\Users\sgafo\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51410}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51410/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5cd83f7868ad0c450a6e524e27f78894
+	at com.hrm.testcases.AddEmployeeFromExcelTest.userDataFromExcel(AddEmployeeFromExcelTest.java:37)
+
+com.hrm.testcases.AddEmployeeTest.testAddNewEmployeeFromPropertiesFile  Time elapsed: 32.521 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: menu_pim_viewPimModule' (tried for 15 second(s) with 500 milliseconds interval)
+	at com.hrm.testcases.AddEmployeeTest.testAddNewEmployeeFromPropertiesFile(AddEmployeeTest.java:18)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#menu_pim_viewPimModule"}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [002b8a3a3113a1476de362dcfa943754, findElement {value=menu_pim_viewPimModule, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.90 (219ee74681fc..., userDataDir: C:\Users\sgafo\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51458}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51458/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 002b8a3a3113a1476de362dcfa943754
+	at com.hrm.testcases.AddEmployeeTest.testAddNewEmployeeFromPropertiesFile(AddEmployeeTest.java:18)
 

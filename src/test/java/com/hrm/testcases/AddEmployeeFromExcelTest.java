@@ -42,10 +42,11 @@ public class AddEmployeeFromExcelTest extends BaseClass {
         // Get employee ID - needed for later verification/validation.
         String createdEmployeeId = addEmployeePage.employeeId.getAttribute("value"); // getText() didn't work.
         System.out.println("Newly-created Employee ID = " + createdEmployeeId);
-        addEmployeePage.createCredentialsCheckbox.click();
+        addEmployeePage.createLoginDetailsCheckBox.click();
         waitInSeconds(1);
         // Credentials section appears after click, fill this section then click save button.
         sendText(addEmployeePage.username, username);
+        waitInSeconds(1);
         sendText(addEmployeePage.password, password);
         sendText(addEmployeePage.confirmPassword, password);
         addEmployeePage.saveButton.click();

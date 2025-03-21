@@ -16,8 +16,8 @@ public class LoginTest extends BaseClass {  //You either extend them (not recomm
         sendText(loginPage.username, ConfigsReader.getProperty("username"));
         sendText(loginPage.password, ConfigsReader.getProperty("password"));
         loginPage.loginButton.click();
-        String expectedUser = "Welcome Admin"; // OrangeHRM=Paul, SyntaxHRM=Admin
-        String actualUser = dashboardPage.welcome.getText();
+        String expectedUser = "Dashboard"; // OrangeHRM=Paul, SyntaxHRM=Admin
+        String actualUser = dashboardPage.dashboard.getText();
         Assert.assertEquals(actualUser, expectedUser, "Logged in user is NOT Admin");
         System.out.println("Admin login is successful"); // this message only runs if Assertion doesn't fail.
     }
@@ -39,8 +39,8 @@ public class LoginTest extends BaseClass {  //You either extend them (not recomm
     public void testLoginEmptyUsername() {
         sendText(loginPage.password, ConfigsReader.getProperty("password"));
         loginPage.loginButton.click();
-        String expectedErrorMsg = "Username cannot be empty";
-        String actualErrorMsg = loginPage.errorMessage.getText();
+        String expectedErrorMsg = "Required";
+        String actualErrorMsg = loginPage.inputFieldRequiredErrorText.getText();
         Assert.assertEquals(actualErrorMsg, expectedErrorMsg, "Error message is incorrect.");
     }
 }

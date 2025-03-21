@@ -9,20 +9,24 @@ import static com.hrm.utils.CommonMethods.*;
 
 public class LoginPageElements {
 
-    @FindBy(id = "txtUsername")
+    @FindBy(name = "username")
     public WebElement username;
 
-    @FindBy(name = "txtPassword")
+    @FindBy(name = "password")
     public WebElement password;
 
-    @FindBy(id = "btnLogin")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
 
     @FindBy(css = "div#divLogo img")
     public WebElement hrmLogo;
 
-    @FindBy(id = "spanMessage")
+    @FindBy(xpath = "//p[text()='Invalid credentials']")
     public WebElement errorMessage;
+
+
+    @FindBy(xpath = "//span[text()='Required']")
+    public WebElement inputFieldRequiredErrorText;
 
 
     public LoginPageElements() {
